@@ -71,10 +71,6 @@
       border-left: 6px solid #ccc;
       border-radius: 6px;
     }
-    .step.current {
-      border-left-color: #d40511;
-      background: #ffe8e8;
-    }
     .step::before {
       content: '';
       position: absolute;
@@ -85,8 +81,20 @@
       background: #ccc;
       border-radius: 50%;
     }
+    /* Current step highlight + pulsing animation */
+    @keyframes pulse {
+      0%   { background-color: #ffe8e8; }
+      50%  { background-color: #ffd0d0; }
+      100% { background-color: #ffe8e8; }
+    }
+    .step.current {
+      border-left-color: #d40511;
+      background: #ffe8e8;
+      animation: pulse 2s infinite;
+    }
     .step.current::before {
       background: #d40511;
+      box-shadow: 0 0 8px #d40511;
     }
     .label {
       font-weight: bold;
