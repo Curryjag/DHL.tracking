@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal</title>
   <style>
     body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #ffcc00 0%, #d40511 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffcc00 0%, #d40511 100%);
     }
     .wrapper {
       max-width: 800px;
@@ -98,22 +98,20 @@
       box-shadow: 0 0 8px #d40511;
     }
     .label {
-  font-weight: 600;   /* slightly lighter than bold */
-  font-size: 18px;    /* a bit larger for clarity */
-  color: #222;        /* darker, cleaner look */
-  margin-bottom: 4px;
-}
-
-.location {
-  font-size: 15px;    /* slightly larger than before */
-  color: #555;        /* softer gray for secondary info */
-}
-
-.timestamp {
-  font-size: 13px;    /* small but readable */
-  color: #777;        /* subtle, de‑emphasized */
-  margin-top: 6px;
-}
+      font-weight: 600;
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 4px;
+    }
+    .location {
+      font-size: 15px;
+      color: #555;
+    }
+    .timestamp {
+      font-size: 13px;
+      color: #777;
+      margin-top: 6px;
+    }
     .error {
       color: #d40511;
       font-weight: bold;
@@ -128,57 +126,57 @@
       text-align: center;
     }
     .checkmark {
-  display: inline-block;
-  width: 14px;
-  height: 8px;
-  border-left: 3px solid green;
-  border-bottom: 3px solid green;
-  transform: rotate(-45deg);
-  margin-left: 6px;
+      display: inline-block;
+      width: 14px;
+      height: 8px;
+      border-left: 3px solid green;
+      border-bottom: 3px solid green;
+      transform: rotate(-45deg);
+      margin-left: 6px;
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="header">
-      <img src="https://www.dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg" alt="DHL Express Logo" />
+      <img src="https://www.dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg" alt="Logo de DHL Express" />
     </div>
 
     <div class="content">
-      <h1>Track Your Shipment</h1>
+      <h1>Rastrea tu envío</h1>
 
       <div class="form">
-        <input type="text" id="trackingInput" placeholder="Enter Tracking Number" />
+        <input type="text" id="trackingInput" placeholder="Ingresa el número de rastreo" />
         <br />
-        <button class="button" onclick="checkTracking()">Track</button>
-        <div id="error" class="error">Invalid tracking number</div>
+        <button class="button" onclick="checkTracking()">Rastrear</button>
+        <div id="error" class="error">Número de rastreo inválido</div>
       </div>
 
       <div id="timeline" class="timeline">
         <div class="step current">
-          <div class="label">Shipment Registered</div>
-          <div class="location">Mexico City, MX</div>
-          <div class="timestamp">Jan 20, 2026, 13:30 PM GMT-6</div>
+          <div class="label">Envío registrado</div>
+          <div class="location">Ciudad de México, MX</div>
+          <div class="timestamp">20 Ene 2026, 13:30 PM GMT-6</div>
         </div>
         <div class="step">
-          <div class="label">In Transit</div>
-          <div class="location">Departed Facility</div>
-          <div class="timestamp">Pending</div>
+          <div class="label">En tránsito</div>
+          <div class="location">Instalación de salida</div>
+          <div class="timestamp">Pendiente</div>
         </div>
         <div class="step">
-          <div class="label">Delivered</div>
+          <div class="label">Entregado</div>
           <div class="location">Francisco Villa No. 398  
 Colonia Guadalupe Tlaltenco  
 C.P. 13450  
 Entre Isabel La Católica y Antonio Salanueva  
 Ciudad de México, México</div>
-          <div class="timestamp">Pending</div>
+          <div class="timestamp">Pendiente</div>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      © DHL International
+      © DHL Internacional
     </div>
   </div>
 
@@ -188,7 +186,7 @@ Ciudad de México, México</div>
       const timeline = document.getElementById("timeline");
       const error = document.getElementById("error");
 
-      // Set your specific allowed tracking number here
+      // Número de rastreo permitido
       const allowedNumber = "98P46E89W62";
 
       if (input === allowedNumber) {
@@ -201,7 +199,7 @@ Ciudad de México, México</div>
     }
   </script>
   
-<!-- Tidio widget -->
+<!-- Widget de Tidio -->
   <script src="//code.tidio.co/voxrt025ls0t376jgkhtpghvi2gnblbx.js" async></script>
 </body>
 </html>
